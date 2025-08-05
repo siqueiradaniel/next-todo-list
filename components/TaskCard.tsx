@@ -1,8 +1,11 @@
 import React from 'react'
+import { Task } from '@/types'
 
-const TaskCard = () => {
+const TaskCard = ({task}: { task: Task}) => {
   return (
-    <div>TaskCard</div>
+    <div className='w-full bg-gray-300'>
+        {task.description}
+        </div>
   )
 }
 
