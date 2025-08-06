@@ -4,8 +4,14 @@ export type Client = {
     password: string 
 }
 
+export enum TaskStatus {
+    COMPLETE = 'COMPLETE',
+    INCOMPLETE = 'INCOMPLETE'
+}
+
 export type Task = {
     id: number 
     clientId: number 
     description: string 
+    status: TaskStatus
 }
