@@ -1,12 +1,8 @@
-import { clientsApi } from "@/lib/api/client";
-import Image from "next/image";
 import Header from "@/components/Header";
 import TaskCardList from "@/components/TaskCardList";
 import { Plus } from "lucide-react";
 
 export default async function Home() {
-  const clients = await clientsApi.getAll()
-
   return (
     <div className="min-h-screen w-full bg-blue-300 flex items-center justify-center">
       <div className="h-full min-w-xl flex flex-col items-center bg-gray-100 p-8 rounded-xl">
@@ -16,7 +12,7 @@ export default async function Home() {
             placeholder="Add your task" 
             className="w-full  p-2 px-4 placeholder-gray-400 text-xl" />
             
-          <Plus className="bg-green-500 rounded-full text-gray-700 w-11 h-11 p-2" strokeWidth={3.5} />
+          <Plus className="bg-green-500 rounded-full text-gray-700 w-11 h-11 p-2 cursor-pointer" strokeWidth={3.5} />
         </div>
         <TaskCardList />
       </div>

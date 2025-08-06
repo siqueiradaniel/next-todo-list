@@ -1,14 +1,16 @@
-import { tasksApi } from '@/lib/api/tasks'
+'use client'
+
 import React from 'react'
 import TaskCard from './TaskCard'
+import { useTasksContext } from '@/context/TasksContext'
 
-const TaskCardList = async () => {
-  const tasks = await tasksApi.getAll()
-
+const TaskCardList = () => {
+  const { tasks } = useTasksContext()
+  
   return (
     <div className='flex flex-col w-full items-center mt-12'>
         {tasks.map((task) => (
-          <TaskCard key={task.id} _task={task}/>
+          <TaskCard key={task.id} taskId={task.id}/>
         ))}
     </div>
   )
