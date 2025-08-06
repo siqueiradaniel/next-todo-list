@@ -8,13 +8,15 @@ export default async function Home() {
   const clients = await clientsApi.getAll()
 
   return (
-    <div className="h-full w-full flex flex-col items-center py-8">
-      <Header />
-      <div className="flex flex-row items-center">
-        <input placeholder="Add your task" className="rounded-4xl p-2 px-4 mt-4 bg-neutral-400"/>
-        <Plus className="bg-green-600 rounded-full text-gray-700 w-12 h-12 p-2" strokeWidth={3.5} />
+    <div className="min-h-screen w-full bg-blue-300 flex items-center justify-center">
+      <div className="h-full min-w-xl flex flex-col items-center bg-gray-100 p-8 rounded-xl">
+        <Header />
+        <div className="w-full flex flex-row items-center rounded-4xl bg-gray-200 mt-4">
+          <input placeholder="Add your task" className="w-full  p-2 px-4 placeholder-gray-400 text-xl" />
+          <Plus className="bg-green-500 rounded-full text-gray-700 w-11 h-11 p-2" strokeWidth={3.5} />
+        </div>
+        <TaskCardList />
       </div>
-      <TaskCardList />
     </div>
   );
 }

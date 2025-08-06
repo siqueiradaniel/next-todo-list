@@ -7,7 +7,7 @@ const TaskCardList = async () => {
   console.log(tasks)
 
   return (
-    <div className='flex flex-col items-center'>
+    <div className='flex flex-col w-full items-center mt-12'>
         {tasks.map((task) => (
           <TaskCard key={task.id} task={task}/>
         ))}

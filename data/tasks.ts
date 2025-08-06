@@ -9,6 +9,6 @@ export const tasksData = [
     {
         id: 2,
         clientId: 2,
-        description: 'Construção do sistema de cadastro de mulheres'
+        description: 'Construção do sistema'
     }
 ]
