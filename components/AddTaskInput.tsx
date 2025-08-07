@@ -1,7 +1,7 @@
 'use client'
 
 import { useTasksContext } from '@/context/TasksContext'
-import { clientsApi } from '@/lib/api/client'
+import { clientsApi } from '@/lib/api/clients'
 import { Plus } from 'lucide-react'
 import React, { useState } from 'react'
 

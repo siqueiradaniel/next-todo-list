@@ -4,7 +4,7 @@ import TaskCardList from "@/components/TaskCardList";
 
 export default function Home() {
   return (
-    <div className="min-h-screen w-full bg-blue-300 flex items-center justify-center">
+    <div className="min-h-screen w-full bg-cyan-600 flex items-center justify-center">
       <div className="h-full max-w-2xs md:min-w-xl flex flex-col items-center bg-gray-100 p-8 rounded-xl">
         <Header />
         <AddTaskInput />
