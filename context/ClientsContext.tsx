@@ -12,11 +12,19 @@ type ClientsContextType = {
 }
 
 
+
 const ClientsContext = createContext<ClientsContextType | undefined>(undefined)
 
 export const ClientsProvider = ({ children }: { children: React.ReactNode }) => {
     const [client, setClient] = useState<Client | null>(null)
-    const router = useRouter()   
+    const router = useRouter()
+
+    useEffect(() => {
+        if (!client) {
+            router.push('/login')
+        }
+            
+    }, [])
 
     const login = async (email: string, password: string) => {
         try {
